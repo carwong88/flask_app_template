@@ -36,7 +36,7 @@ def login():
       flash('Email does not exist. Please sign up.', category='error')
       return redirect(url_for('auth.sign_up'))
 
-  return render_template('login.html', title='Login', form=form)
+  return render_template('auth/login.html', title='Login', form=form)
 
 
 @auth.route('sign-up', methods=['GET', 'POST'])
@@ -59,4 +59,4 @@ def sign_up():
       login_user(user, remember=True) 
       return redirect(url_for('main.index'))
         
-  return render_template('sign_up.html', title='Sign Up', form=form)
+  return render_template('auth/sign_up.html', title='Sign Up', form=form)
