@@ -1,4 +1,4 @@
-from website import db
+from src import db
 from flask_login import UserMixin
 from sqlalchemy.sql import func
 from sqlalchemy.exc import IntegrityError

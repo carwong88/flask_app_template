@@ -15,12 +15,12 @@ def create_app():
 
   db.init_app(app)
 
-  from .views.main import main
-  from .views.auth import auth
+  from src.views.main import main
+  from src.views.auth import auth
   app.register_blueprint(main, url_prefix='/')
   app.register_blueprint(auth, url_prefix='/auth')
 
-  from .models.user import User, Note
+  from src.models.user import User, Note
   db.create_all(app=app)
 
   login_manager = LoginManager()
