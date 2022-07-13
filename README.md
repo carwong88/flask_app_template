@@ -4,12 +4,18 @@ This is a template for building a flash application.
 
 ## Steps to set up the environment
 1. Download the zip file and extract it
+
 2. Rename the flask_app_template to your project name
+
 3. Setup a virtual environment under your project<br>
   `python -m venv venv`
+
 4. Install required packages<br>
+  `Remove the last line "uwsgi" from the requirements.txt file (That's for deploying on Heroku)`<br>
   `pip install -r .\requirements.txt`
+
 5. Set up environment variables on your machine (See Environmnet Variables)
+
 6. Start the development server and run the app<br>
   `./app.py`
 
